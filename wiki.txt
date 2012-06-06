@@ -1,0 +1,15 @@
+N¿gle = tidsstempel plus tilf¾ldigt tal
+
+1 Œr = 365 * 24 * 60 * 60 * 1000 = 32 mia millis
+
+sandsynligheden for at ramme samme n¿gle i et millisekund skal v¾re meget mindre end 1/(32 mia) ... f.eks 10^-12. se birthday problem
+
+kan riak fort¾lle hvis 2 n¿gler rammer hinanden med en conditional put?
+	sŒ kan sandsynligheden g¿res mindre, hvis det sker kan vi pr¿ve igen...
+	Vi skal ogsŒ underst¿tte replays fra klienter, sŒ ovenstŒende skal gent¾nkes
+	
+
+Lav applikationen sŒ vi optager alle request/responses til en logfil
+	=> ekstra sikkerhed, data kan k¿res pŒ igen
+	=> vi kan replaye alt vores trafik i test (vil dette v¾re lovligt med produktionsdata = persondata)
+	

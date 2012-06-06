@@ -1,0 +1,8 @@
+{application, auditlogger,
+ [{description, "auditlogger"},
+  {vsn, "0.0.1"},
+  {registered, [auditlogger_sup, auditlogger]},
+  {applications, [kernel, stdlib, sasl]},
+  {mod, {auditlogger_app, []}},
+  {env, []}
+ ]}.

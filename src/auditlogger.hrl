@@ -1,0 +1,1 @@
+-record(column, {name, index=false, required=false}).
